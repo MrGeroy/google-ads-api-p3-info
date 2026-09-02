@@ -1,39 +1,48 @@
-# Google Ads API Keyword Planning Tool
+# Google Drop 2026 — Google API Research Integrations
 
-Public project documentation for a Google Ads API Basic Access application.
+Public project documentation for Google API integrations being prepared for an internal ecommerce research and Google Ads planning workflow.
 
-This page describes an internal keyword research and Google Ads campaign planning tool being developed by an individual advertiser for my own ecommerce project.
+This project is operated by an independent developer and advertiser for my own ecommerce project.
 
-The tool is currently under development. The Google Ads API pilot described below has not yet been executed.
+The integrations described below are currently in the access and validation-preparation stage. No claim is made that either API has already been approved, fully integrated, or validated for production use.
 
 ---
 
 ## Review summary
 
-- **Operator:** Individual advertiser / developer
-- **Project type:** Internal ecommerce advertising research tool
-- **Primary purpose:** Google Ads keyword research and campaign planning
+- **Operator:** Individual advertiser / independent developer
+- **Project type:** Internal ecommerce research and advertising planning
+- **Commercial use:** Yes
 - **Intended users:** Internal use only
 - **External clients:** None
-- **Third-party Google Ads account management:** None
-- **Primary API service:** `KeywordPlanIdeaService`
-- **Initial API operation:** `GenerateKeywordHistoricalMetrics`
-- **Campaign type supported:** Search
-- **Campaign creation or management:** Not supported during the P3 pilot
-- **Current status:** Tool under development; controlled API validation pilot not yet executed
-- **Requested access:** Google Ads API Basic Access
+- **Third-party account management:** None
+- **Public software or SaaS:** No
+- **Automated campaign management:** Not part of the current scope
 
-## Supporting documentation
+### Google Ads API
 
-A detailed design document describing the planned P3 pilot, API scope, data flow, validation process, access model, and current development status is publicly available here:
+- **Purpose:** Keyword research and Google Ads campaign planning
+- **Primary service:** `KeywordPlanIdeaService`
+- **Initial operation:** `GenerateKeywordHistoricalMetrics`
+- **Campaign type:** Search
+- **Requested access:** Basic Access
+- **Current status:** Application submitted; review pending
+- **Initial pilot:** P3 controlled validation against manual Google Keyword Planner exports
 
-[View the Google Ads API P3 Tool Design document (PDF)](./Google_Ads_API_P3_Tool_Design.pdf)
+### Google Trends API
 
-The document describes the planned tool and validation workflow. It does not claim that the API pilot has already been executed or that Google Ads API data has already been validated against Google Keyword Planner.
+- **Purpose:** Ecommerce research, market comparison, seasonality analysis, and search-interest research
+- **Access requested:** Google Trends API Alpha
+- **Organization type:** Independent developer
+- **Use case:** Commercial
+- **Current status:** Alpha application submitted; access not yet granted
+- **Planned use:** Internal research only
 
 ---
 
-## Project overview
+# Google Ads API
+
+## Google Ads API project overview
 
 I am developing an internal Google Ads API tool for my own ecommerce advertising workflow.
 
@@ -49,7 +58,7 @@ It is not:
 
 The project is being developed for my own advertising research and planning.
 
-## Business model
+## Google Ads API business model
 
 I am an individual advertiser operating my own ecommerce project.
 
@@ -110,7 +119,7 @@ At the current stage:
 - no claim is made that API results exactly match Keyword Planner;
 - the API is not treated as a replacement for the existing manual Keyword Planner workflow.
 
-## Planned pilot workflow
+## Planned Google Ads pilot workflow
 
 The planned workflow is:
 
@@ -126,31 +135,9 @@ The planned workflow is:
 
 No automatic Google Ads campaign changes occur in this workflow.
 
-## Intended users and access model
+## Google Ads API scope limitations
 
-The tool is for internal use only.
-
-Access is limited to:
-
-- me; and
-- internal collaborators working on my own ecommerce advertising and research workflow, if needed.
-
-The tool will not be provided to:
-
-- clients;
-- unrelated advertisers;
-- third-party companies;
-- the general public.
-
-No third-party advertiser will be able to use my developer token through this tool.
-
-## Google Ads campaign relationship
-
-The keyword research produced by the tool is intended to support planning and keyword selection for future Google Search campaigns for my own ecommerce project.
-
-The P3 pilot itself is read-only from an advertising-management perspective.
-
-During this stage, the tool will not:
+During the P3 stage, the tool will not:
 
 - create Google Ads accounts;
 - create campaigns;
@@ -165,42 +152,150 @@ During this stage, the tool will not:
 - perform App Conversion Tracking operations;
 - perform Remarketing API operations.
 
-Campaign creation and campaign-management automation are outside the scope of the current P3 pilot.
+Campaign creation and automated campaign management are outside the scope of the current P3 pilot.
 
-## Why Basic Access is requested
+## Why Google Ads API Basic Access is requested
 
 The developer token currently has Test Account Access.
 
-Basic Access is requested so the controlled keyword-planning pilot can use the Google Ads API functionality required to evaluate historical keyword metrics in the relevant production Google Ads environment.
+Basic Access is requested so the controlled keyword-planning pilot can evaluate the required Google Ads API functionality in the appropriate production Google Ads environment.
 
 The requested use is limited to keyword planning and research supporting my own advertising workflow.
 
 The initial controlled use is intentionally small in scope.
 
-## Current development status
+## Google Ads API supporting documentation
 
-The tool is currently under development.
+A detailed design document describing the planned P3 pilot, API scope, data flow, validation process, access model, and development status is publicly available here:
 
-The controlled Google Ads API pilot has not yet been executed.
+[View the Google Ads API P3 Tool Design document (PDF)](./Google_Ads_API_P3_Tool_Design.pdf)
 
-Current preparation includes:
+The document describes the planned tool and validation workflow. It does not claim that the API pilot has already been executed or that Google Ads API data has already been validated against Google Keyword Planner.
 
-- defining the validation workflow;
-- documenting the intended API scope;
+---
+
+# Google Trends API Alpha
+
+## Google Trends API use case
+
+I have applied for access to the Google Trends API Alpha for the same internal ecommerce research project.
+
+The planned use is commercial internal research supporting my own ecommerce and future Google Ads planning.
+
+The Google Trends API would be used programmatically to:
+
+- compare search interest for product-related queries;
+- analyze changes in search interest over time;
+- identify seasonality;
+- compare search-interest patterns across markets and regions;
+- evaluate groups of related search terms;
+- support product and market research;
+- support keyword prioritization;
+- provide an additional signal for future Google Ads planning.
+
+## Relationship to other research sources
+
+Google Trends data will be treated as one research signal among multiple sources.
+
+It will not be treated as:
+
+- proof of product demand by itself;
+- a replacement for Google Keyword Planner;
+- a replacement for Google Ads API keyword metrics;
+- proof of profitability;
+- an automatic product-selection decision.
+
+The purpose is to combine Trends data with other evidence while preserving human review and source-specific limitations.
+
+## Planned Google Trends workflow
+
+If Alpha access is granted, the initial workflow will be:
+
+1. Select a controlled set of product-related search terms.
+2. Query Google Trends data for relevant time periods.
+3. Compare search-interest patterns across selected markets where supported.
+4. Analyze seasonality and material changes over time.
+5. Compare related terms using consistent API-derived data.
+6. Store results for internal research.
+7. Compare Trends observations with other independent research sources.
+8. Record limitations and disagreements instead of automatically treating Trends as definitive evidence.
+9. Keep all product, market, and advertising decisions subject to human review.
+
+## Intended users
+
+The Google Trends API integration is for internal use only.
+
+Access would be limited to:
+
+- me; and
+- internal collaborators working on my own ecommerce research and advertising workflow, if needed.
+
+It will not be offered to:
+
+- clients;
+- unrelated advertisers;
+- third-party companies;
+- the general public.
+
+## Current Google Trends API status
+
+The Google Trends API Alpha application has been submitted.
+
+Access has not yet been granted.
+
+The planned integration has therefore not yet been implemented or executed.
+
+I am prepared to begin controlled testing shortly after access is granted and to provide feedback to Google regarding:
+
+- API integration experience;
+- query workflows;
+- data coverage;
+- regional comparisons;
+- time-series analysis;
+- practical use in an ecommerce research workflow.
+
+---
+
+# Shared access model
+
+Both integrations are intended for the same internal ecommerce research project.
+
+They serve different purposes:
+
+- **Google Ads API:** historical keyword metrics and Google Ads keyword planning;
+- **Google Trends API:** relative search-interest patterns, time trends, seasonality, and regional comparisons.
+
+Neither integration grants external users access to the underlying API credentials.
+
+No third-party advertiser will be able to use my developer token or API credentials through these tools.
+
+---
+
+# Current development status
+
+The project is currently in the access and validation-preparation stage.
+
+Current work includes:
+
+- defining controlled research workflows;
+- documenting API scope and limitations;
 - preparing the Google Cloud project;
-- obtaining the appropriate Google Ads API access level;
-- preserving existing manual Google Keyword Planner measurements for later comparison.
-
-OAuth configuration, API execution, and the controlled comparison will only proceed when the required access and configuration are available.
+- requesting the appropriate API access;
+- preserving manually collected research data for later comparison;
+- preparing validation procedures before relying on API-derived results.
 
 No claim is made that:
 
-- the P3 pilot is already running;
-- API parity with Keyword Planner has already been confirmed;
-- the API already replaces the manual Keyword Planner workflow;
-- the tool currently performs production campaign management.
+- Google Ads API Basic Access has already been approved;
+- Google Trends API Alpha access has already been approved;
+- either API integration is currently running in production;
+- Google Ads API parity with Keyword Planner has been confirmed;
+- Google Trends data independently validates product demand;
+- either API automatically makes product, market, or campaign decisions.
 
-## Data handling and security
+---
+
+# Data handling and security
 
 Sensitive authentication information is not published in this repository.
 
@@ -212,56 +307,47 @@ The following are never intentionally published here:
 - passwords;
 - backup codes;
 - private credentials;
+- API keys;
 - secret keys.
 
-Public identifiers and project documentation may be used only where necessary to explain the tool and its intended Google Ads API use.
+Public documentation is limited to information necessary to explain the project, intended API use, access model, and validation approach.
 
-This repository exists to provide transparent public information about the project for Google Ads API review.
+---
 
-## Public documentation purpose
+# Project operator
 
-This public page is maintained so that the Google Ads API review team can examine:
-
-- the business model;
-- the purpose of the API tool;
-- the intended audience;
-- the planned Google Ads API functionality;
-- the relationship between the API data and future Google Ads campaign planning;
-- the current development status;
-- the limitations of the initial pilot.
-
-Because the tool is still under development, this documentation describes the planned implementation and validation workflow rather than representing an already completed production application.
-
-## Project operator
-
-This project is operated by **Oleksandr Okrepkyi** as an individual advertiser and developer.
+This project is operated by **Oleksandr Okrepkyi** as an individual advertiser and independent developer.
 
 Public professional profile:
 
 [Oleksandr Okrepkyi on LinkedIn](https://www.linkedin.com/in/oleksandr-okrepkyi/)
 
-The active contact email for the Google Ads API application is provided directly to Google through the Google Ads API Center and Basic Access application.
-
-## Official Google Ads API documentation
-
-The planned functionality is based on the following official Google Ads API documentation:
-
-### Generate Historical Metrics
-
-[Google Ads API — Generate Historical Metrics](https://developers.google.com/google-ads/api/docs/keyword-planning/generate-historical-metrics)
-
-### Google Ads API Access Levels and Permissible Use
-
-[Google Ads API — Access Levels and Permissible Use](https://developers.google.com/google-ads/api/docs/api-policy/access-levels)
-
-### Google Ads API Developer Token
-
-[Google Ads API — Developer Token](https://developers.google.com/google-ads/api/docs/api-policy/developer-token)
+The active contact email used for API applications is provided directly to Google through the relevant application forms and Google API interfaces.
 
 ---
 
-## Important status statement
+# Official Google documentation
 
-**This project is currently in the access and validation-preparation stage.**
+## Google Ads API — Generate Historical Metrics
 
-The P3 API comparison has not yet been executed, Google Ads API parity with the existing manual Keyword Planner workflow has not been established, and the API does not currently replace that manual workflow.
+[Google Ads API — Generate Historical Metrics](https://developers.google.com/google-ads/api/docs/keyword-planning/generate-historical-metrics)
+
+## Google Ads API — Access Levels and Permissible Use
+
+[Google Ads API — Access Levels and Permissible Use](https://developers.google.com/google-ads/api/docs/api-policy/access-levels)
+
+## Google Ads API — Developer Token
+
+[Google Ads API — Developer Token](https://developers.google.com/google-ads/api/docs/api-policy/developer-token)
+
+## Google Trends API Alpha
+
+[Google Trends API](https://developers.google.com/search/apis/trends)
+
+---
+
+# Important status statement
+
+**Google Ads API Basic Access and Google Trends API Alpha are currently access requests, not completed integrations.**
+
+The Google Ads P3 comparison has not yet been executed, API parity with the existing manual Keyword Planner workflow has not been established, and Google Trends API Alpha access has not yet been granted.
