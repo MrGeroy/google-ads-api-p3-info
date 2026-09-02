@@ -238,25 +238,25 @@ This project is operated by **Oleksandr Okrepkyi** as an individual advertiser a
 
 Public professional profile:
 
-https://www.linkedin.com/in/oleksandr-okrepkyi/
+[Oleksandr Okrepkyi on LinkedIn](https://www.linkedin.com/in/oleksandr-okrepkyi/)
 
 The active contact email for the Google Ads API application is provided directly to Google through the Google Ads API Center and Basic Access application.
 
 ## Official Google Ads API documentation
 
-The planned functionality is based on the following Google Ads API documentation:
+The planned functionality is based on the following official Google Ads API documentation:
 
 ### Generate Historical Metrics
 
-https://developers.google.com/google-ads/api/docs/keyword-planning/generate-historical-metrics
+[Google Ads API — Generate Historical Metrics](https://developers.google.com/google-ads/api/docs/keyword-planning/generate-historical-metrics)
 
 ### Google Ads API Access Levels and Permissible Use
 
-https://developers.google.com/google-ads/api/docs/api-policy/access-levels
+[Google Ads API — Access Levels and Permissible Use](https://developers.google.com/google-ads/api/docs/api-policy/access-levels)
 
 ### Google Ads API Developer Token
 
-https://developers.google.com/google-ads/api/docs/api-policy/developer-token
+[Google Ads API — Developer Token](https://developers.google.com/google-ads/api/docs/api-policy/developer-token)
 
 ---
 
